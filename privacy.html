@@ -101,15 +101,24 @@
           <li>You control it entirely</li>
         </ul>
 
-        <h3 style="margin-top: var(--spacing-lg);">Advertising Data (v1.0: Not Collected)</h3>
-        <p><strong>Current Status</strong>: All users enjoy an ad-free experience in v1.0. No advertising data is collected.</p>
-        
-        <p><strong>Future Versions</strong>: If we introduce optional ads:</p>
+        <h3 style="margin-top: var(--spacing-lg);">Advertising Data (Collected by Google AdMob)</h3>
+        <p>
+          When ads are displayed, Google AdMob may collect:
+        </p>
         <ul style="margin-top: var(--spacing-sm); line-height: 1.8; padding-left: var(--spacing-md);">
-          <li>We may collect device advertising identifiers (with your permission via ATT)</li>
-          <li>Google AdMob may collect ad interaction data</li>
-          <li>This will be clearly disclosed before implementation</li>
-          <li>You can always choose an ad-free subscription</li>
+          <li>✓ Device advertising identifier (IDFA) - with your permission</li>
+          <li>✓ Ad interaction data (clicks, views, conversions)</li>
+          <li>✓ Device information (model, OS version)</li>
+          <li>✓ General location data (country/region level)</li>
+          <li>✓ App usage patterns related to ad performance</li>
+        </ul>
+        
+        <p style="margin-top: var(--spacing-md);"><strong>This data</strong>:</p>
+        <ul style="margin-top: var(--spacing-sm); line-height: 1.8; padding-left: var(--spacing-md);">
+          <li>Is collected by Google AdMob, not by us</li>
+          <li>Is used to show relevant ads and measure performance</li>
+          <li>You can opt out via iOS Settings → Privacy & Security → Apple Advertising</li>
+          <li>We have no access to this data</li>
         </ul>
       </div>
 
@@ -171,19 +180,51 @@
       <div class="glass-card" style="margin-bottom: var(--spacing-lg);">
         <h2>4. Third-Party Services</h2>
         
-        <h3>Advertising (Future Feature)</h3>
+        <h3>Advertising (Currently Active)</h3>
         <p>
-          IngrediList includes infrastructure for advertising through <strong>Google AdMob</strong>.
+          IngrediList includes advertising through <strong>Google AdMob</strong> to support app development and provide free access to core features.
         </p>
-        <p><strong>Current Status (v1.0)</strong>: All users enjoy an ad-free experience. <strong>No advertising data is collected.</strong></p>
+        <p><strong>Current Status</strong>: Ads are active and may be displayed to users.</p>
         
-        <p><strong>When ads are enabled</strong> (future versions):</p>
+        <p><strong>Data Collection for Advertising</strong>:</p>
         <ul style="margin-top: var(--spacing-sm); line-height: 1.8; padding-left: var(--spacing-md);">
-          <li>Google AdMob may collect device advertising identifiers</li>
-          <li>Ad interaction and performance data may be collected</li>
-          <li>We will request permission via <strong>App Tracking Transparency (ATT)</strong></li>
+          <li>Google AdMob may collect device advertising identifiers (with your permission via ATT)</li>
+          <li>Ad interaction and performance data may be collected by Google</li>
+          <li>We request permission via <strong>App Tracking Transparency (ATT)</strong> on first launch</li>
           <li>You can opt out of personalized ads in iOS Settings</li>
-          <li>Ad-free subscriptions are available</li>
+          <li>Ad-free subscriptions are available for users who prefer no ads</li>
+        </ul>
+        
+        <p style="margin-top: var(--spacing-md);">
+          <strong>Google's Privacy Policy</strong>: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a>
+        </p>
+
+        <h3 style="margin-top: var(--spacing-lg);">Google AdMob (Advertising)</h3>
+        <p>
+          IngrediList uses Google AdMob to display advertisements. This service:
+        </p>
+        <ul style="margin-top: var(--spacing-sm); line-height: 1.8; padding-left: var(--spacing-md);">
+          <li>May collect device advertising identifiers (IDFA) with your permission</li>
+          <li>Collects ad interaction data for performance measurement</li>
+          <li>Uses device information to show relevant ads</li>
+          <li>Operates under Google's privacy policy and data practices</li>
+        </ul>
+        
+        <p style="margin-top: var(--spacing-md);"><strong>Data collected by AdMob</strong>:</p>
+        <ul style="margin-top: var(--spacing-sm); line-height: 1.8; padding-left: var(--spacing-md);">
+          <li>Device advertising identifier (if permission granted)</li>
+          <li>Ad views, clicks, and interactions</li>
+          <li>Device type and operating system</li>
+          <li>General geographic location (country/region)</li>
+          <li>App usage patterns related to advertising</li>
+        </ul>
+        
+        <p style="margin-top: var(--spacing-md);"><strong>You can</strong>:</p>
+        <ul style="margin-top: var(--spacing-sm); line-height: 1.8; padding-left: var(--spacing-md);">
+          <li>Opt out of personalized ads in iOS Settings</li>
+          <li>Choose "Ask App Not to Track" when prompted</li>
+          <li>Purchase an ad-free subscription</li>
+          <li>Contact us to disable ads entirely</li>
         </ul>
         
         <p style="margin-top: var(--spacing-md);">
@@ -245,6 +286,15 @@
           <strong>Purpose</strong>: To add shopping lists to Apple Reminders<br>
           <strong>When</strong>: First time you tap "Add to Reminders"<br>
           <strong>Required</strong>: No - you can view lists in-app only
+        </p>
+
+        <h3 style="margin-top: var(--spacing-md);">App Tracking Transparency (ATT)</h3>
+        <p>
+          <strong>Purpose</strong>: To request permission for personalized advertising<br>
+          <strong>When</strong>: First app launch<br>
+          <strong>Required</strong>: No - you can choose "Ask App Not to Track"<br>
+          <strong>What it does</strong>: Allows Google AdMob to show personalized ads<br>
+          <strong>You can change this anytime in</strong>: iOS Settings → Privacy & Security → Tracking
         </p>
         
         <p style="margin-top: var(--spacing-md);">
@@ -357,8 +407,8 @@
         <ul style="margin-top: var(--spacing-sm); line-height: 1.8; padding-left: var(--spacing-md);">
           <li>All on-device processing (most secure)</li>
           <li>Apple's secure frameworks (Vision, StoreKit, CloudKit)</li>
-          <li>No external data transmission</li>
-          <li>No third-party trackers or SDKs (v1.0)</li>
+          <li>No personal data transmission by us</li>
+          <li>Google AdMob for advertising (with your permission)</li>
         </ul>
         <p style="margin-top: var(--spacing-md);">
           <strong>Your data is as secure as your iPhone</strong>—which is to say, very secure.
@@ -388,8 +438,8 @@
         </p>
         <ul style="margin-top: var(--spacing-sm); line-height: 1.8; padding-left: var(--spacing-md);">
           <li>✅ All processing on your device</li>
-          <li>✅ No data collection or transmission</li>
-          <li>✅ No third-party trackers (v1.0)</li>
+          <li>✅ No personal data collection by us</li>
+          <li>✅ Google AdMob for advertising (with your permission)</li>
           <li>✅ Apple's privacy protections apply</li>
           <li>✅ You control all your data</li>
           <li>✅ Compliant with GDPR, CCPA, COPPA</li>
