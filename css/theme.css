@@ -1,29 +1,48 @@
 /* ============================================
-   IngrediList - Accessible Theme System
-   WCAG 2.2 AA Compliant Color Palette
+   IngrediList - Dynamic Contrast System
+   WCAG 2.2 AA Compliant with Adaptive Readability
    ============================================ */
 
 :root {
   /* Light Theme - High Contrast Colors */
   
-  /* Primary Colors (WCAG AAA for 18px+) */
-  --color-text: #1C1C1E;        /* Contrast: 15.8:1 on white */
-  --color-text-secondary: #48484A;  /* Contrast: 7.2:1 on white */
-  --color-text-tertiary: #6E6E73;   /* Contrast: 5.1:1 on white */
+  /* Primary Text Colors (WCAG AAA) */
+  --text-primary-light: #1C1C1E;        /* Contrast: 15.8:1 on white */
+  --text-primary-dark: #FFFFFF;          /* For dark backgrounds */
+  --text-secondary-light: #48484A;      /* Contrast: 7.2:1 on white */
+  --text-secondary-dark: rgba(255, 255, 255, 0.82);  /* For dark backgrounds */
+  --text-tertiary-light: #6E6E73;       /* Contrast: 5.1:1 on white */
+  --text-tertiary-dark: rgba(255, 255, 255, 0.65);  /* For dark backgrounds */
+  
+  /* Legacy support - map to new tokens */
+  --color-text: var(--text-primary-light);
+  --color-text-secondary: var(--text-secondary-light);
+  --color-text-tertiary: var(--text-tertiary-light);
   
   /* Background Colors */
   --color-bg: #F7F8FA;
   --color-bg-secondary: #FFFFFF;
   --color-bg-tertiary: #F2F3F5;
   
-  /* Glass/Translucent Colors with Opacity */
-  --color-glass-bg: rgba(255, 255, 255, 0.9);  /* More opaque for readability */
+  /* Glass/Translucent Colors with Dynamic Opacity */
+  --surface-glass-light: rgba(255, 255, 255, 0.75);
+  --surface-glass-dark: rgba(18, 18, 18, 0.75);
+  --glass-overlay-light: rgba(255, 255, 255, 0.85);  /* Text overlay */
+  --glass-overlay-dark: rgba(0, 0, 0, 0.65);  /* Text overlay */
+  
+  /* Legacy support */
+  --color-glass-bg: var(--surface-glass-light);
   --color-glass-border: rgba(0, 0, 0, 0.1);
   
   /* Accent Colors */
-  --color-accent: #0066FF;       /* Apple blue - 4.5:1 on white */
-  --color-accent-hover: #004FDB;
-  --color-accent-light: #4E8BFF;
+  --accent: #4E8BFF;
+  --accent-hover: #2D6DFF;
+  --accent-light: #6999FF;
+  
+  /* Legacy support */
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-accent-light: var(--accent-light);
   
   /* Status Colors */
   --color-success: #30D158;
@@ -43,10 +62,10 @@
 /* Dark Theme (WCAG AAA compliant) */
 @media (prefers-color-scheme: dark) {
   :root {
-    /* Primary Colors */
-    --color-text: #F5F5F7;        /* Contrast: 15.8:1 on black */
-    --color-text-secondary: #E5E5EA;  /* Contrast: 12.6:1 on black */
-    --color-text-tertiary: #A1A1A6;   /* Contrast: 7.9:1 on black */
+    /* Primary Text Colors */
+    --color-text: var(--text-primary-dark);
+    --color-text-secondary: var(--text-secondary-dark);
+    --color-text-tertiary: var(--text-tertiary-dark);
     
     /* Background Colors */
     --color-bg: #121212;
@@ -54,12 +73,13 @@
     --color-bg-tertiary: #2C2C2E;
     
     /* Glass/Translucent Colors */
-    --color-glass-bg: rgba(28, 28, 30, 0.9);
+    --color-glass-bg: var(--surface-glass-dark);
     --color-glass-border: rgba(255, 255, 255, 0.2);
     
     /* Accent Colors */
-    --color-accent: #4E8BFF;
-    --color-accent-hover: #6999FF;
+    --color-accent: var(--accent);
+    --color-accent-hover: var(--accent-hover);
+    --color-accent-light: var(--accent-light);
     
     /* Neutral Colors */
     --color-divider: rgba(255, 255, 255, 0.12);
@@ -67,7 +87,7 @@
     --color-shadow-hover: rgba(0, 0, 0, 0.6);
     
     /* Focus */
-    --color-focus: #4E8BFF;
+    --color-focus: var(--accent);
     --color-focus-ring: rgba(78, 139, 255, 0.3);
   }
 }
@@ -93,5 +113,160 @@
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
+  }
+}
+
+/* ============================================
+   Dynamic Contrast Utilities
+   ============================================ */
+
+/* Text Overlay for Glass Surfaces */
+.text-overlay {
+  position: relative;
+  padding: var(--spacing-lg);
+  border-radius: var(--border-radius);
+}
+
+.text-overlay::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--glass-overlay-light);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-radius: inherit;
+  z-index: -1;
+  transition: background 0.3s ease, backdrop-filter 0.3s ease;
+}
+
+/* Dark mode overlay */
+@media (prefers-color-scheme: dark) {
+  .text-overlay::before {
+    background: var(--glass-overlay-dark);
+  }
+}
+
+/* Glass Card with Text Overlay */
+.glass-card-text {
+  background: var(--surface-glass-light);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid var(--color-glass-border);
+  border-radius: var(--border-radius);
+  position: relative;
+  overflow: hidden;
+}
+
+.glass-card-text::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--glass-overlay-light);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.glass-card-text > * {
+  position: relative;
+  z-index: 1;
+}
+
+@media (prefers-color-scheme: dark) {
+  .glass-card-text {
+    background: var(--surface-glass-dark);
+  }
+  .glass-card-text::before {
+    background: var(--glass-overlay-dark);
+  }
+}
+
+/* Auto-Contrast Text Adjuster */
+.text-auto-contrast {
+  color: var(--text-primary-light);
+}
+
+@media (prefers-color-scheme: dark) {
+  .text-auto-contrast {
+    color: var(--text-primary-dark);
+  }
+}
+
+/* Adaptive Background Overlay */
+.adaptive-overlay {
+  position: relative;
+}
+
+.adaptive-overlay::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.adaptive-overlay:hover::before {
+  opacity: 1;
+}
+
+@media (prefers-color-scheme: dark) {
+  .adaptive-overlay::before {
+    background: rgba(0, 0, 0, 0.5);
+  }
+}
+
+/* Enhanced Glass Effects for Better Readability */
+.glass-enhanced {
+  background: linear-gradient(
+    135deg,
+    var(--glass-overlay-light) 0%,
+    rgba(255, 255, 255, 0.6) 100%
+  );
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+@media (prefers-color-scheme: dark) {
+  .glass-enhanced {
+    background: linear-gradient(
+      135deg,
+      var(--glass-overlay-dark) 0%,
+      rgba(0, 0, 0, 0.5) 100%
+    );
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+}
+
+/* High Performance Blur */
+@supports (backdrop-filter: blur(1px)) {
+  .glass-enhanced {
+    will-change: transform;
+    transform: translateZ(0);
+  }
+}
+
+/* Text Shadow for Better Contrast on Glass */
+.text-shadow-gentle {
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+@media (prefers-color-scheme: dark) {
+  .text-shadow-gentle {
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+  }
+}
+
+.text-shadow-strong {
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+@media (prefers-color-scheme: dark) {
+  .text-shadow-strong {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
   }
 }
