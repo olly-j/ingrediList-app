@@ -1,0 +1,30 @@
+<svg width="200" height="60" viewBox="0 0 200 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Shopping Bag Icon -->
+  <defs>
+    <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4E8BFF;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#9BC2FF;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Bag -->
+  <path d="M8 8L4 14V38C4 38.7956 4.31607 39.5587 4.87868 40.1213C5.44129 40.6839 6.20435 41 7 41H29C29.7956 41 30.5587 40.6839 31.1213 40.1213C31.6839 39.5587 32 38.7956 32 38V14L28 8H8Z" 
+        fill="url(#logoGradient)" 
+        stroke="#4E8BFF" 
+        stroke-width="2" 
+        stroke-linecap="round" 
+        stroke-linejoin="round"/>
+  <path d="M4 14H32" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="0.8"/>
+  <path d="M24 20C24 22.1217 23.1571 24.1566 21.6569 25.6569C20.1566 27.1571 18.1217 28 16 28C13.8783 28 11.8434 27.1571 10.3431 25.6569C8.84286 24.1566 8 22.1217 8 20" 
+        stroke="white" 
+        stroke-width="2" 
+        stroke-linecap="round" 
+        stroke-linejoin="round" 
+        opacity="0.8"/>
+  
+  <!-- Text: IngrediList -->
+  <text x="50" y="35" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Inter', sans-serif" font-size="24" font-weight="600" fill="#1C1C1E">
+    IngrediList
+  </text>
+</svg>
+

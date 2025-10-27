@@ -1,0 +1,27 @@
+{
+  "name": "ingredilist-app",
+  "version": "1.0.0",
+  "description": "Official marketing website for IngrediList - From recipe to shopping list in seconds",
+  "main": "index.html",
+  "scripts": {
+    "dev": "python3 -m http.server 8000",
+    "serve": "npx serve",
+    "deploy:vercel": "vercel --prod",
+    "deploy:netlify": "netlify deploy --prod"
+  },
+  "keywords": [
+    "ingredilist",
+    "recipe",
+    "shopping-list",
+    "ios",
+    "marketing-site"
+  ],
+  "author": "IngrediList",
+  "license": "UNLICENSED",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/ingredilist-app"
+  }
+}
+
