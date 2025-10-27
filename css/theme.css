@@ -1,0 +1,97 @@
+/* ============================================
+   IngrediList - Accessible Theme System
+   WCAG 2.2 AA Compliant Color Palette
+   ============================================ */
+
+:root {
+  /* Light Theme - High Contrast Colors */
+  
+  /* Primary Colors (WCAG AAA for 18px+) */
+  --color-text: #1C1C1E;        /* Contrast: 15.8:1 on white */
+  --color-text-secondary: #48484A;  /* Contrast: 7.2:1 on white */
+  --color-text-tertiary: #6E6E73;   /* Contrast: 5.1:1 on white */
+  
+  /* Background Colors */
+  --color-bg: #F7F8FA;
+  --color-bg-secondary: #FFFFFF;
+  --color-bg-tertiary: #F2F3F5;
+  
+  /* Glass/Translucent Colors with Opacity */
+  --color-glass-bg: rgba(255, 255, 255, 0.9);  /* More opaque for readability */
+  --color-glass-border: rgba(0, 0, 0, 0.1);
+  
+  /* Accent Colors */
+  --color-accent: #0066FF;       /* Apple blue - 4.5:1 on white */
+  --color-accent-hover: #004FDB;
+  --color-accent-light: #4E8BFF;
+  
+  /* Status Colors */
+  --color-success: #30D158;
+  --color-warning: #FF9F0A;
+  --color-error: #FF453A;
+  
+  /* Neutral Colors */
+  --color-divider: rgba(0, 0, 0, 0.12);
+  --color-shadow: rgba(0, 0, 0, 0.08);
+  --color-shadow-hover: rgba(0, 0, 0, 0.12);
+  
+  /* Focus and Interaction */
+  --color-focus: #0066FF;
+  --color-focus-ring: rgba(0, 102, 255, 0.3);
+}
+
+/* Dark Theme (WCAG AAA compliant) */
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Primary Colors */
+    --color-text: #F5F5F7;        /* Contrast: 15.8:1 on black */
+    --color-text-secondary: #E5E5EA;  /* Contrast: 12.6:1 on black */
+    --color-text-tertiary: #A1A1A6;   /* Contrast: 7.9:1 on black */
+    
+    /* Background Colors */
+    --color-bg: #121212;
+    --color-bg-secondary: #1C1C1E;
+    --color-bg-tertiary: #2C2C2E;
+    
+    /* Glass/Translucent Colors */
+    --color-glass-bg: rgba(28, 28, 30, 0.9);
+    --color-glass-border: rgba(255, 255, 255, 0.2);
+    
+    /* Accent Colors */
+    --color-accent: #4E8BFF;
+    --color-accent-hover: #6999FF;
+    
+    /* Neutral Colors */
+    --color-divider: rgba(255, 255, 255, 0.12);
+    --color-shadow: rgba(0, 0, 0, 0.4);
+    --color-shadow-hover: rgba(0, 0, 0, 0.6);
+    
+    /* Focus */
+    --color-focus: #4E8BFF;
+    --color-focus-ring: rgba(78, 139, 255, 0.3);
+  }
+}
+
+/* High Contrast Mode Support */
+@media (prefers-contrast: high) {
+  :root {
+    --color-text: #000000;
+    --color-text-secondary: #000000;
+    --color-bg: #FFFFFF;
+    --color-glass-bg: #FFFFFF;
+    --color-divider: #000000;
+    --border-width: 2px;
+  }
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

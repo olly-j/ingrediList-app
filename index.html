@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -46,8 +46,12 @@
 </head>
 <body>
   
+  <!-- Skip to Main Content Link -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  
   <!-- Navigation -->
-  <nav class="nav">
+  <header role="banner">
+    <nav class="nav" role="navigation" aria-label="Main navigation">
     <div class="nav-container">
       <a href="/" class="nav-logo">
         <img src="assets/app-icon-1024.png" alt="IngrediList" width="32" height="32" style="border-radius: 8px;">
@@ -62,9 +66,11 @@
       </ul>
     </div>
   </nav>
+  </header>
 
   <!-- Hero Section with Video -->
-  <section class="hero hero-with-video">
+  <main id="main-content" role="main">
+  <section class="hero hero-with-video" aria-label="Hero section">
     <!-- Video Background -->
     <div class="hero-video-wrapper">
       <video class="hero-video" autoplay muted loop playsinline poster="assets/video-poster.jpg">
@@ -258,8 +264,10 @@
     </div>
   </section>
 
+  </main>
+
   <!-- Footer -->
-  <footer class="footer">
+  <footer class="footer" role="contentinfo">
     <div class="container">
       <div class="footer-content">
         <span>© 2025 IngrediList</span>

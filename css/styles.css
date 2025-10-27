@@ -2,6 +2,9 @@
    IngrediList - Liquid Glass Styling System
    ============================================ */
 
+@import url('theme.css');
+@import url('typography.css');
+
 /* CSS Variables - Design Tokens */
 :root {
   /* Colors */
@@ -644,11 +647,43 @@ a:hover {
   }
 }
 
-/* Focus Styles */
-*:focus-visible {
-  outline: 2px solid var(--color-accent);
-  outline-offset: 4px;
+/* Skip to Main Content Link (Hidden until focused) */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--color-accent);
+  color: white;
+  padding: 8px 16px;
+  text-decoration: none;
+  font-weight: 600;
+  z-index: 10000;
   border-radius: 4px;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* Focus Styles - Enhanced for Accessibility */
+*:focus-visible {
+  outline: 3px solid var(--color-focus);
+  outline-offset: 3px;
+  border-radius: 4px;
+  box-shadow: 0 0 0 2px var(--color-focus-ring);
+}
+
+/* Button Focus */
+.btn:focus-visible {
+  outline: 3px solid white;
+  outline-offset: 2px;
+  box-shadow: 0 0 0 4px var(--color-focus-ring);
+}
+
+/* Link Focus */
+a:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 2px;
 }
 
 /* App Badge Styles */
