@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,29 +13,38 @@
 </head>
 <body>
   
+  <!-- Skip to Main Content Link -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  
   <!-- Navigation -->
-  <nav class="nav">
-    <div class="nav-container">
-      <a href="/" class="nav-logo">
-        <img src="assets/app-icon-1024.png" alt="IngrediList" width="32" height="32" style="border-radius: 8px;">
-        <span>IngrediList</span>
-      </a>
-      <ul class="nav-links">
-        <li><a href="/">Home</a></li>
-        <li><a href="/how-it-works.html">How It Works</a></li>
-        <li><a href="/support.html">Support</a></li>
-        <li><a href="/privacy.html">Privacy</a></li>
-        <li><a href="/press.html">Press</a></li>
-      </ul>
-    </div>
-  </nav>
+  <header role="banner">
+    <nav class="nav" role="navigation" aria-label="Main navigation">
+      <div class="nav-container">
+        <a href="/" class="nav-logo">
+          <img src="assets/app-icon-1024.png" alt="IngrediList" width="32" height="32" style="border-radius: 8px;">
+          <span>IngrediList</span>
+        </a>
+        <ul class="nav-links">
+          <li><a href="/">Home</a></li>
+          <li><a href="/how-it-works.html">How It Works</a></li>
+          <li><a href="/support.html">Support</a></li>
+          <li><a href="/privacy.html">Privacy</a></li>
+          <li><a href="/press.html">Press</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
 
   <!-- Hero Section -->
-  <section class="hero">
+  <main id="main-content" role="main">
+  <section class="hero" aria-label="Privacy Policy">
     <div class="container">
       <h1>Privacy Policy</h1>
       <p class="hero-subtitle">
         Your privacy is fundamental. IngrediList is built to keep your data yours.
+      </p>
+      <p class="small" style="margin-top: var(--spacing-md);">
+        <strong>Last Updated:</strong> October 2025
       </p>
     </div>
   </section>
@@ -50,25 +59,57 @@
         <p>
           IngrediList is designed with privacy at its core. We believe your recipes, shopping habits, and culinary preferences are personal and should remain private. This policy explains how IngrediList handles your information.
         </p>
-        <p style="margin-top: var(--spacing-sm); color: var(--color-subtext); font-weight: 500;">
-          <strong>In short:</strong> We don't collect, store, or share your data. Everything happens on your device.
+        <p style="margin-top: var(--spacing-md); color: var(--color-text); font-weight: 500;">
+          <strong>In short</strong>: We process everything on your device. We don't collect personal data or share it with third parties.
         </p>
       </div>
 
       <!-- Data Collection -->
       <div class="glass-card" style="margin-bottom: var(--spacing-lg);">
         <h2>1. Data Collection</h2>
-        <p><strong>We collect no personal data.</strong></p>
+        
+        <h3>On-Device Only</h3>
         <p>
-          IngrediList does not collect, transmit, or store any of the following:
+          IngrediList processes all recipe data entirely on your device. <strong>We do not collect, transmit, or store</strong>:
         </p>
-        <ul style="color: var(--color-subtext); margin-top: var(--spacing-sm); line-height: 1.8; padding-left: var(--spacing-md);">
-          <li>Scanned recipes or text</li>
-          <li>Shopping lists or ingredients</li>
-          <li>Photos or images you scan</li>
-          <li>Your name, email address, or contact details</li>
-          <li>Device identifiers or usage analytics</li>
-          <li>Location data</li>
+        <ul style="margin-top: var(--spacing-sm); line-height: 1.8; padding-left: var(--spacing-md);">
+          <li>❌ Scanned recipes or text</li>
+          <li>❌ Shopping lists or ingredients</li>
+          <li>❌ Photos or images you scan</li>
+          <li>❌ Your name or contact details</li>
+          <li>❌ Location data</li>
+          <li>❌ Browsing history</li>
+        </ul>
+
+        <h3 style="margin-top: var(--spacing-lg);">App Functionality Data (Stored Locally or in Your iCloud)</h3>
+        <p>
+          The following data is stored <strong>on your device</strong> or in <strong>your personal iCloud account</strong>:
+        </p>
+        <ul style="margin-top: var(--spacing-sm); line-height: 1.8; padding-left: var(--spacing-md);">
+          <li>✓ App preferences (measurement system, settings toggles)</li>
+          <li>✓ Selected default reminder list preference</li>
+          <li>✓ Store cupboard items</li>
+          <li>✓ Recipe scan history (stored locally only)</li>
+          <li>✓ Subscription status (managed by Apple StoreKit)</li>
+        </ul>
+        
+        <p style="margin-top: var(--spacing-md);"><strong>This data</strong>:</p>
+        <ul style="margin-top: var(--spacing-sm); line-height: 1.8; padding-left: var(--spacing-md);">
+          <li>Remains on your device or in your iCloud account</li>
+          <li>Is never transmitted to our servers (we have no servers)</li>
+          <li>We have no access to it</li>
+          <li>You control it entirely</li>
+        </ul>
+
+        <h3 style="margin-top: var(--spacing-lg);">Advertising Data (v1.0: Not Collected)</h3>
+        <p><strong>Current Status</strong>: All users enjoy an ad-free experience in v1.0. No advertising data is collected.</p>
+        
+        <p><strong>Future Versions</strong>: If we introduce optional ads:</p>
+        <ul style="margin-top: var(--spacing-sm); line-height: 1.8; padding-left: var(--spacing-md);">
+          <li>We may collect device advertising identifiers (with your permission via ATT)</li>
+          <li>Google AdMob may collect ad interaction data</li>
+          <li>This will be clearly disclosed before implementation</li>
+          <li>You can always choose an ad-free subscription</li>
         </ul>
       </div>
 
@@ -76,51 +117,105 @@
       <div class="glass-card" style="margin-bottom: var(--spacing-lg);">
         <h2>2. On-Device Processing</h2>
         <p>
-          All AI processing and optical character recognition (OCR) happens entirely on your iPhone using Apple's on-device Foundation Models framework.
+          All artificial intelligence and optical character recognition (OCR) happens entirely on your iPhone or iPad using <strong>Apple's on-device Vision framework</strong>.
         </p>
-        <p style="margin-top: var(--spacing-sm);">
-          This means:
-        </p>
-        <ul style="color: var(--color-subtext); margin-top: var(--spacing-sm); line-height: 1.8; padding-left: var(--spacing-md);">
+        <p style="margin-top: var(--spacing-md);">This means:</p>
+        <ul style="margin-top: var(--spacing-sm); line-height: 1.8; padding-left: var(--spacing-md);">
           <li>✓ Your recipes never leave your device</li>
-          <li>✓ No internet connection is required for scanning</li>
+          <li>✓ No internet connection required for scanning</li>
           <li>✓ We have no servers storing your data</li>
           <li>✓ Even we, the developers, cannot see what you scan</li>
+          <li>✓ Processing is private, fast, and secure</li>
         </ul>
       </div>
 
-      <!-- Apple Reminders Integration -->
+      <!-- Apple Services Integration -->
       <div class="glass-card" style="margin-bottom: var(--spacing-lg);">
-        <h2>3. Apple Reminders Integration</h2>
+        <h2>3. Apple Services Integration</h2>
+        
+        <h3>Apple Reminders</h3>
         <p>
-          IngrediList integrates with Apple Reminders to sync your shopping lists. When you add items to Reminders:
+          IngrediList integrates with Apple Reminders to create shopping lists. When you add items to Reminders:
         </p>
-        <ul style="color: var(--color-subtext); margin-top: var(--spacing-sm); line-height: 1.8; padding-left: var(--spacing-md);">
-          <li>Data is stored in your personal iCloud account</li>
+        <ul style="margin-top: var(--spacing-sm); line-height: 1.8; padding-left: var(--spacing-md);">
+          <li>Shopping lists are stored in <strong>your personal iCloud account</strong></li>
           <li>We do not have access to your Reminders data</li>
-          <li>Apple's privacy policies apply to data in Reminders</li>
-          <li>You can revoke IngrediList's access at any time via iOS Settings</li>
+          <li><strong>Apple's privacy policies apply</strong></li>
+          <li>You can revoke access anytime in: iOS Settings → IngrediList → Reminders</li>
         </ul>
-        <p style="margin-top: var(--spacing-sm);">
-          For more information, see <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple's Privacy Policy</a>.
+
+        <h3 style="margin-top: var(--spacing-lg);">iCloud Key-Value Storage</h3>
+        <p>
+          IngrediList uses Apple's iCloud Key-Value Storage to sync app preferences across your devices, including:
+        </p>
+        <ul style="margin-top: var(--spacing-sm); line-height: 1.8; padding-left: var(--spacing-md);">
+          <li>Your selected default reminder list</li>
+          <li>Store cupboard items</li>
+          <li>App settings and toggles</li>
+        </ul>
+        
+        <p style="margin-top: var(--spacing-md);">This data:</p>
+        <ul style="margin-top: var(--spacing-sm); line-height: 1.8; padding-left: var(--spacing-md);">
+          <li>Is stored in <strong>your personal iCloud account</strong></li>
+          <li>Is never accessible to us</li>
+          <li>Syncs only between your own devices</li>
+          <li>Can be disabled in: iOS Settings → Apple ID → iCloud → IngrediList</li>
+        </ul>
+        
+        <p style="margin-top: var(--spacing-md);">
+          <strong>Learn more</strong>: <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple Privacy Policy</a>
         </p>
       </div>
 
       <!-- Third-Party Services -->
       <div class="glass-card" style="margin-bottom: var(--spacing-lg);">
         <h2>4. Third-Party Services</h2>
-        <p><strong>We use no third-party analytics, tracking, or advertising services.</strong></p>
+        
+        <h3>Advertising (Future Feature)</h3>
         <p>
-          IngrediList does not integrate with:
+          IngrediList includes infrastructure for advertising through <strong>Google AdMob</strong>.
         </p>
-        <ul style="color: var(--color-subtext); margin-top: var(--spacing-sm); line-height: 1.8; padding-left: var(--spacing-md);">
-          <li>Google Analytics or similar services</li>
-          <li>Facebook SDKs or social media trackers</li>
-          <li>Advertising networks</li>
-          <li>Crash reporting services that transmit data externally</li>
+        <p><strong>Current Status (v1.0)</strong>: All users enjoy an ad-free experience. <strong>No advertising data is collected.</strong></p>
+        
+        <p><strong>When ads are enabled</strong> (future versions):</p>
+        <ul style="margin-top: var(--spacing-sm); line-height: 1.8; padding-left: var(--spacing-md);">
+          <li>Google AdMob may collect device advertising identifiers</li>
+          <li>Ad interaction and performance data may be collected</li>
+          <li>We will request permission via <strong>App Tracking Transparency (ATT)</strong></li>
+          <li>You can opt out of personalized ads in iOS Settings</li>
+          <li>Ad-free subscriptions are available</li>
         </ul>
-        <p style="margin-top: var(--spacing-sm);">
-          If you purchase IngrediList Pro, the transaction is handled entirely by Apple via the App Store. We do not process or store payment information.
+        
+        <p style="margin-top: var(--spacing-md);">
+          <strong>Google's Privacy Policy</strong>: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a>
+        </p>
+
+        <h3 style="margin-top: var(--spacing-lg);">Analytics</h3>
+        <p>
+          IngrediList does <strong>not use third-party analytics services</strong>. We do not integrate with:
+        </p>
+        <ul style="margin-top: var(--spacing-sm); line-height: 1.8; padding-left: var(--spacing-md);">
+          <li>❌ Google Analytics</li>
+          <li>❌ Facebook Analytics</li>
+          <li>❌ Crash reporting services that transmit data externally</li>
+          <li>❌ Behavioral tracking or profiling services</li>
+        </ul>
+        <p style="margin-top: var(--spacing-md);">
+          We may add privacy-respecting, on-device analytics in future versions to improve the app. We will update this policy accordingly.
+        </p>
+
+        <h3 style="margin-top: var(--spacing-lg);">In-App Purchases</h3>
+        <p>
+          If you purchase a subscription, the transaction is handled entirely by <strong>Apple via the App Store</strong>:
+        </p>
+        <ul style="margin-top: var(--spacing-sm); line-height: 1.8; padding-left: var(--spacing-md);">
+          <li>We do not process or store payment information</li>
+          <li>Apple manages all billing and subscriptions</li>
+          <li><strong>Apple's privacy policies apply</strong></li>
+        </ul>
+        
+        <p style="margin-top: var(--spacing-md);">
+          <strong>Learn more</strong>: <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple Privacy Policy</a>
         </p>
       </div>
 
@@ -130,13 +225,30 @@
         <p>
           IngrediList requests the following iOS permissions:
         </p>
-        <ul style="color: var(--color-subtext); margin-top: var(--spacing-sm); line-height: 1.8; padding-left: var(--spacing-md);">
-          <li><strong>Camera</strong> – To scan recipes from physical sources</li>
-          <li><strong>Photo Library</strong> – To scan recipes from saved images</li>
-          <li><strong>Reminders</strong> – To add shopping lists to Apple Reminders</li>
-        </ul>
-        <p style="margin-top: var(--spacing-sm);">
-          All permissions are optional. If denied, IngrediList will prompt you when the feature is needed. You can manage permissions in iOS Settings at any time.
+        
+        <h3>Camera</h3>
+        <p>
+          <strong>Purpose</strong>: To scan recipes from physical sources<br>
+          <strong>When</strong>: First time you tap the camera button<br>
+          <strong>Required</strong>: No - you can manually type ingredients instead
+        </p>
+
+        <h3 style="margin-top: var(--spacing-md);">Photo Library</h3>
+        <p>
+          <strong>Purpose</strong>: To scan recipes from saved images<br>
+          <strong>When</strong>: First time you choose "Photo Library"<br>
+          <strong>Required</strong>: No - camera-only mode available
+        </p>
+
+        <h3 style="margin-top: var(--spacing-md);">Reminders</h3>
+        <p>
+          <strong>Purpose</strong>: To add shopping lists to Apple Reminders<br>
+          <strong>When</strong>: First time you tap "Add to Reminders"<br>
+          <strong>Required</strong>: No - you can view lists in-app only
+        </p>
+        
+        <p style="margin-top: var(--spacing-md);">
+          <strong>All permissions are optional.</strong> If denied, IngrediList will prompt you when the feature is needed. You can manage permissions in: <strong>iOS Settings → IngrediList</strong>
         </p>
       </div>
 
@@ -144,28 +256,40 @@
       <div class="glass-card" style="margin-bottom: var(--spacing-lg);">
         <h2>6. Data Retention</h2>
         <p>
-          Because IngrediList does not collect or store data on external servers, there is nothing to retain. All data exists solely on your device and within your personal iCloud account (if you choose to sync via Reminders).
+          Because IngrediList does not collect or store data on external servers, <strong>there is nothing for us to retain</strong>.
         </p>
-        <p style="margin-top: var(--spacing-sm);">
-          If you delete IngrediList from your iPhone, all local app data is removed. Your Reminders lists remain in your iCloud account and can be managed independently.
+        <p>
+          All data exists solely:
         </p>
+        <ul style="margin-top: var(--spacing-sm); line-height: 1.8; padding-left: var(--spacing-md);">
+          <li>On your device (app preferences, recipe history)</li>
+          <li>In your personal iCloud account (synced preferences, if enabled)</li>
+        </ul>
+        
+        <p style="margin-top: var(--spacing-md);"><strong>If you delete IngrediList</strong>:</p>
+        <ul style="margin-top: var(--spacing-sm); line-height: 1.8; padding-left: var(--spacing-md);">
+          <li>All local app data is removed from your device</li>
+          <li>Your Reminders lists remain in your iCloud account (managed by Apple)</li>
+          <li>Your iCloud preferences are deleted after 30 days (Apple policy)</li>
+        </ul>
       </div>
 
-      <!-- Your Rights (GDPR) -->
+      <!-- GDPR Rights -->
       <div class="glass-card" style="margin-bottom: var(--spacing-lg);">
-        <h2>7. Your Rights (GDPR Compliance)</h2>
+        <h2>7. Your Rights (GDPR & Privacy Laws)</h2>
         <p>
-          Under the General Data Protection Regulation (GDPR) and similar privacy laws, you have the right to:
+          Under the <strong>General Data Protection Regulation (GDPR)</strong>, <strong>California Consumer Privacy Act (CCPA)</strong>, and similar privacy laws, you have the right to:
         </p>
-        <ul style="color: var(--color-subtext); margin-top: var(--spacing-sm); line-height: 1.8; padding-left: var(--spacing-md);">
-          <li><strong>Access</strong> your personal data</li>
-          <li><strong>Rectify</strong> inaccurate data</li>
-          <li><strong>Delete</strong> your data</li>
-          <li><strong>Object</strong> to data processing</li>
-          <li><strong>Data portability</strong></li>
+        <ul style="margin-top: var(--spacing-sm); line-height: 1.8; padding-left: var(--spacing-md);">
+          <li>Access your personal data</li>
+          <li>Rectify inaccurate data</li>
+          <li>Delete your data</li>
+          <li>Object to data processing</li>
+          <li>Data portability</li>
+          <li>Withdraw consent</li>
         </ul>
-        <p style="margin-top: var(--spacing-sm);">
-          Since IngrediList does not collect personal data, these rights are automatically fulfilled—there is no data for us to access, rectify, or delete on external servers.
+        <p style="margin-top: var(--spacing-md);">
+          <strong>Since IngrediList does not collect personal data on external servers</strong>, these rights are <strong>automatically fulfilled</strong>—there is no data for us to access, rectify, or delete. You have complete control over all data on your device and iCloud.
         </p>
       </div>
 
@@ -173,40 +297,119 @@
       <div class="glass-card" style="margin-bottom: var(--spacing-lg);">
         <h2>8. Children's Privacy</h2>
         <p>
-          IngrediList does not knowingly collect data from children under 13 (or the applicable age in your jurisdiction). Because we collect no personal data at all, IngrediList is safe for users of all ages.
+          IngrediList does <strong>not knowingly collect data from children</strong> under 13 (or the applicable age in your jurisdiction).
+        </p>
+        <p style="margin-top: var(--spacing-md);">
+          Because we collect <strong>no personal data at all</strong>, IngrediList is safe for users of all ages and meets all children's privacy requirements under <strong>COPPA</strong> (Children's Online Privacy Protection Act) and similar regulations.
+        </p>
+        <p style="margin-top: var(--spacing-md);">
+          <strong>Age Rating</strong>: 4+ (suitable for all ages)
         </p>
       </div>
 
-      <!-- Changes to This Policy -->
+      <!-- International Users -->
       <div class="glass-card" style="margin-bottom: var(--spacing-lg);">
-        <h2>9. Changes to This Policy</h2>
+        <h2>9. International Users</h2>
         <p>
-          We may update this Privacy Policy from time to time to reflect changes in the app or legal requirements. If we make significant changes, we will notify you via an in-app message or App Store update notes.
+          IngrediList is available worldwide. Because all processing happens on your device:
         </p>
-        <p style="margin-top: var(--spacing-sm); color: var(--color-subtext);">
-          <strong>Last updated:</strong> October 2025
+        <ul style="margin-top: var(--spacing-sm); line-height: 1.8; padding-left: var(--spacing-md);">
+          <li>✓ No data is transferred across borders</li>
+          <li>✓ No data residency concerns</li>
+          <li>✓ Compliant with data localization laws</li>
+          <li>✓ No "data controllers" or "processors" beyond Apple</li>
+        </ul>
+        <p style="margin-top: var(--spacing-md);">
+          Users in the <strong>European Economic Area (EEA)</strong>, <strong>UK</strong>, and <strong>California</strong> benefit from enhanced privacy protections under local laws. IngrediList's on-device architecture inherently complies with these regulations.
+        </p>
+      </div>
+
+      <!-- Changes to Policy -->
+      <div class="glass-card" style="margin-bottom: var(--spacing-lg);">
+        <h2>10. Changes to This Policy</h2>
+        <p>
+          We may update this Privacy Policy from time to time to reflect:
+        </p>
+        <ul style="margin-top: var(--spacing-sm); line-height: 1.8; padding-left: var(--spacing-md);">
+          <li>Changes in app features</li>
+          <li>Legal requirements</li>
+          <li>Industry best practices</li>
+        </ul>
+        <p style="margin-top: var(--spacing-md);">
+          If we make <strong>significant changes</strong>, we will notify you via:
+        </p>
+        <ul style="margin-top: var(--spacing-sm); line-height: 1.8; padding-left: var(--spacing-md);">
+          <li>In-app message or banner</li>
+          <li>App Store update notes</li>
+          <li>Email (if you've contacted us)</li>
+        </ul>
+        <p style="margin-top: var(--spacing-md);">
+          <strong>We will never reduce your privacy protections without notice.</strong>
+        </p>
+      </div>
+
+      <!-- Security -->
+      <div class="glass-card" style="margin-bottom: var(--spacing-lg);">
+        <h2>11. Security</h2>
+        <p>
+          IngrediList uses industry-standard security practices:
+        </p>
+        <ul style="margin-top: var(--spacing-sm); line-height: 1.8; padding-left: var(--spacing-md);">
+          <li>All on-device processing (most secure)</li>
+          <li>Apple's secure frameworks (Vision, StoreKit, CloudKit)</li>
+          <li>No external data transmission</li>
+          <li>No third-party trackers or SDKs (v1.0)</li>
+        </ul>
+        <p style="margin-top: var(--spacing-md);">
+          <strong>Your data is as secure as your iPhone</strong>—which is to say, very secure.
         </p>
       </div>
 
       <!-- Contact -->
-      <div class="glass-card">
-        <h2>10. Contact Us</h2>
+      <div class="glass-card" style="margin-bottom: var(--spacing-lg);">
+        <h2>12. Contact Us</h2>
         <p>
           If you have questions about this Privacy Policy or IngrediList's privacy practices, please contact us:
         </p>
-        <p style="margin-top: var(--spacing-sm);">
-          <strong>Email:</strong> <a href="mailto:help@ingrediList.app">help@ingrediList.app</a>
+        <p style="margin-top: var(--spacing-md);">
+          <strong>Email</strong>: <a href="mailto:help@ingrediList.app">help@ingrediList.app</a><br>
+          <strong>Website</strong>: <a href="https://ingrediList.app/support">ingrediList.app/support</a>
         </p>
-        <p style="margin-top: var(--spacing-sm); color: var(--color-subtext);">
+        <p style="margin-top: var(--spacing-md); color: var(--color-text-secondary);">
           We aim to respond to all enquiries within 48 hours.
+        </p>
+      </div>
+
+      <!-- Summary -->
+      <div class="glass-card" style="background: linear-gradient(135deg, rgba(78, 139, 255, 0.1) 0%, rgba(155, 194, 255, 0.05) 100%); border: 2px solid var(--color-accent);">
+        <h2 style="color: var(--color-accent);">Summary</h2>
+        <p>
+          IngrediList is a <strong>privacy-first app</strong>:
+        </p>
+        <ul style="margin-top: var(--spacing-sm); line-height: 1.8; padding-left: var(--spacing-md);">
+          <li>✅ All processing on your device</li>
+          <li>✅ No data collection or transmission</li>
+          <li>✅ No third-party trackers (v1.0)</li>
+          <li>✅ Apple's privacy protections apply</li>
+          <li>✅ You control all your data</li>
+          <li>✅ Compliant with GDPR, CCPA, COPPA</li>
+        </ul>
+        <p style="margin-top: var(--spacing-lg); font-size: 1.25em; font-weight: 600;">
+          Your recipes are yours. Always.
+        </p>
+        <p style="margin-top: var(--spacing-md); color: var(--color-text-secondary);">
+          <strong>Privacy Policy URL</strong>: <a href="https://ingrediList.app/privacy">ingrediList.app/privacy</a><br>
+          <strong>Last Updated</strong>: October 2025<br>
+          <strong>Effective</strong>: Upon app launch
         </p>
       </div>
 
     </div>
   </section>
+  </main>
 
   <!-- Footer -->
-  <footer class="footer">
+  <footer class="footer" role="contentinfo">
     <div class="container">
       <div class="footer-content">
         <span>© 2025 IngrediList</span>
