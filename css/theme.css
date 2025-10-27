@@ -27,8 +27,8 @@
   /* Glass/Translucent Colors with Dynamic Opacity */
   --surface-glass-light: rgba(255, 255, 255, 0.75);
   --surface-glass-dark: rgba(18, 18, 18, 0.75);
-  --glass-overlay-light: rgba(255, 255, 255, 0.85);  /* Text overlay */
-  --glass-overlay-dark: rgba(0, 0, 0, 0.65);  /* Text overlay */
+  --glass-overlay-light: rgba(255, 255, 255, 0.92);  /* Strong text overlay for readability */
+  --glass-overlay-dark: rgba(28, 28, 30, 0.90);  /* Strong text overlay for dark mode */
   
   /* Legacy support */
   --color-glass-bg: var(--surface-glass-light);
