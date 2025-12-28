@@ -7,6 +7,10 @@
       "use": "@vercel/static"
     },
     {
+      "src": "*.txt",
+      "use": "@vercel/static"
+    },
+    {
       "src": "css/*.css",
       "use": "@vercel/static"
     },
@@ -31,6 +35,10 @@
     {
       "src": "/support",
       "dest": "/support.html"
+    },
+    {
+      "src": "/terms",
+      "dest": "/terms.html"
     },
     {
       "src": "/press",
