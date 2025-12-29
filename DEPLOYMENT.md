@@ -19,6 +19,7 @@ Complete guide to deploying the IngrediList marketing website to production.
    git add .
    git commit -m "Initial commit: IngrediList marketing site"
    git branch -M main
+   # REVIEW: Update this remote URL to your actual GitHub repository
    git remote add origin https://github.com/your-username/ingredilist-app.git
    git push -u origin main
    ```
@@ -166,7 +167,7 @@ php -S localhost:8000
 - [ ] All internal links work
 - [ ] Navigation is functional on mobile
 - [ ] Footer links work
-- [ ] Email links open mail client (`mailto:help@ingrediList.app`)
+- [ ] Email links open mail client (`mailto:help@ingredilist.app`)
 - [ ] Glass effects render correctly
 - [ ] Dark mode switches properly (if user has dark mode enabled)
 
@@ -190,8 +191,8 @@ php -S localhost:8000
 - [ ] CSP headers configured (optional)
 
 ### App Store Connect
-- [ ] Add Support URL: `https://ingredilist.app/support.html`
-- [ ] Add Privacy Policy URL: `https://ingredilist.app/privacy.html`
+- [ ] Add Support URL: `https://ingredilist.app/support`
+- [ ] Add Privacy Policy URL: `https://ingredilist.app/privacy`
 - [ ] Add Marketing URL: `https://ingredilist.app`
 - [ ] Verify all three URLs are accessible
 

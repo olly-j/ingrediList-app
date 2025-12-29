@@ -8,7 +8,7 @@ This repository contains the official marketing and compliance website for Ingre
 
 ## 🌐 Live Site
 
-**Production:** [https://ingrediList.app](https://ingrediList.app)
+**Production:** [https://ingredilist.app](https://ingredilist.app)
 
 ---
 
@@ -27,7 +27,7 @@ ingrediList-app/
 │   ├── favicon.svg         # Site favicon
 │   ├── logo.svg            # Brand logo
 │   ├── app-icon-1024.png   # App Store icon
-│   └── screenshots/        # Marketing screenshots
+│   └── og-image.png        # Social sharing image
 └── README.md               # This file
 ```
 
@@ -130,8 +130,8 @@ This is a static HTML/CSS site with no build process required. Simply upload all
 IngrediList meets all App Store Connect URL requirements:
 
 - **Marketing URL:** `https://ingrediList.app`
-- **Support URL:** `https://ingrediList.app/support.html`
-- **Privacy Policy URL:** `https://ingrediList.app/privacy.html`
+- **Support URL:** `https://ingredilist.app/support`
+- **Privacy Policy URL:** `https://ingredilist.app/privacy`
 
 ### Compliance Checklist
 
@@ -250,7 +250,7 @@ If you want to add privacy-respecting analytics:
 ## 📞 Contact & Support
 
 **Email:** [help@ingrediList.app](mailto:help@ingrediList.app)  
-**Website:** [https://ingrediList.app](https://ingrediList.app)  
+**Website:** [https://ingredilist.app](https://ingredilist.app)  
 **Press Enquiries:** [help@ingrediList.app](mailto:help@ingrediList.app)
 
 ---

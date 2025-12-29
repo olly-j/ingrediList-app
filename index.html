@@ -13,6 +13,7 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://ingredilist.app">
   <meta property="og:image" content="https://ingredilist.app/assets/app-icon-1024.png">
+  <link rel="canonical" href="https://ingredilist.app/">
   
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
@@ -59,11 +60,11 @@
       </a>
       <ul class="nav-links">
         <li><a href="/">Home</a></li>
-        <li><a href="/how-it-works">How It Works</a></li>
-        <li><a href="/support">Support</a></li>
-        <li><a href="/privacy">Privacy</a></li>
-        <li><a href="/terms">Terms</a></li>
-        <li><a href="/press">Press</a></li>
+        <li><a href="/how-it-works.html">How It Works</a></li>
+        <li><a href="/support.html">Support</a></li>
+        <li><a href="/privacy.html">Privacy</a></li>
+        <li><a href="/terms.html">Terms</a></li>
+        <li><a href="/press.html">Press</a></li>
       </ul>
     </div>
   </nav>
@@ -74,11 +75,7 @@
   <section class="hero hero-with-video" aria-label="Hero section">
     <!-- Video Background -->
     <div class="hero-video-wrapper">
-      <video class="hero-video" autoplay muted loop playsinline poster="assets/video-poster.jpg">
-        <source src="assets/hero-video.mp4" type="video/mp4">
-        <!-- Fallback image if video fails to load -->
-        <img src="assets/video-poster.jpg" alt="IngrediList in action" class="hero-video-fallback">
-      </video>
+      <img class="hero-video" src="assets/video-poster.jpg" alt="" aria-hidden="true" decoding="async" fetchpriority="high">
       <div class="hero-video-overlay"></div>
     </div>
     
@@ -90,12 +87,12 @@
       </p>
       <div class="hero-cta">
         <!-- Update this link once the App Store listing is live -->
-        <a href="#" class="btn btn-primary" aria-label="Coming soon on the App Store" aria-disabled="true">
+        <span class="btn btn-primary btn-disabled" aria-label="Coming soon on the App Store" aria-disabled="true">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M18.71 19.5C17.88 20.74 17 21.95 15.66 21.97C14.32 22 13.89 21.18 12.37 21.18C10.84 21.18 10.37 21.95 9.09997 22C7.78997 22.05 6.79997 20.68 5.95997 19.47C4.24997 17 2.93997 12.45 4.69997 9.39C5.56997 7.87 7.12997 6.91 8.81997 6.88C10.1 6.86 11.32 7.75 12.11 7.75C12.89 7.75 14.37 6.68 15.92 6.84C16.57 6.87 18.39 7.1 19.56 8.82C19.47 8.88 17.39 10.1 17.41 12.63C17.44 15.65 20.06 16.66 20.09 16.67C20.06 16.74 19.67 18.11 18.71 19.5ZM13 3.5C13.73 2.67 14.94 2.04 15.94 2C16.07 3.17 15.6 4.35 14.9 5.19C14.21 6.04 13.07 6.7 11.95 6.61C11.8 5.46 12.36 4.26 13 3.5Z" fill="currentColor"/>
           </svg>
           Coming soon on the App Store
-        </a>
+        </span>
         <a href="https://testflight.apple.com/join/ingredilist" class="btn btn-secondary" aria-label="Join IngrediList TestFlight beta">
           Join TestFlight
         </a>
@@ -237,7 +234,7 @@
         <p>
           All AI processing happens on your iPhone. Your recipe images and text are not uploaded to our servers (we have no servers). The app may show ads via Google AdMob; you can allow or deny tracking via App Tracking Transparency.
         </p>
-        <a href="/privacy" class="btn btn-secondary">Read Full Privacy Policy</a>
+        <a href="/privacy.html" class="btn btn-secondary">Read Full Privacy Policy</a>
       </div>
     </div>
   </section>
@@ -256,12 +253,12 @@
         <div class="app-badges">
           <!-- App Store badge placeholder -->
           <!-- Update this link once the App Store listing is live -->
-          <a href="#" aria-label="Coming soon on the App Store" aria-disabled="true">
+          <span class="app-badge app-badge--disabled" aria-label="Coming soon on the App Store" aria-disabled="true">
             <svg height="48" viewBox="0 0 135 40" xmlns="http://www.w3.org/2000/svg">
               <rect width="135" height="40" rx="8" fill="#000"/>
               <text x="50%" y="50%" text-anchor="middle" dy=".3em" fill="#fff" font-family="SF Pro Display, -apple-system, sans-serif" font-size="11" font-weight="600">Coming soon on the App Store</text>
             </svg>
-          </a>
+          </span>
         </div>
       </div>
     </div>
@@ -277,11 +274,11 @@
         <span class="footer-divider">|</span>
         <a href="mailto:help@ingredilist.app">help@ingredilist.app</a>
         <span class="footer-divider">|</span>
-        <a href="/privacy">Privacy</a>
+        <a href="/privacy.html">Privacy</a>
         <span class="footer-divider">|</span>
-        <a href="/terms">Terms</a>
+        <a href="/terms.html">Terms</a>
         <span class="footer-divider">|</span>
-        <a href="/support">Support</a>
+        <a href="/support.html">Support</a>
       </div>
     </div>
   </footer>

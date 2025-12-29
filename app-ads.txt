@@ -1,6 +1,6 @@
 # IngrediList - app-ads.txt
 # Serve this file at: https://ingredilist.app/app-ads.txt
-# IMPORTANT: Replace the placeholder(s) below with the exact line(s) provided by the Google AdMob console for this app.
+# REVIEW: Replace the placeholder(s) below with the exact line(s) provided by the Google AdMob console for this app.
 # Format reference: https://iabtechlab.com/ads-txt/
 #
 # Example (DO NOT SHIP THIS EXAMPLE AS-IS):

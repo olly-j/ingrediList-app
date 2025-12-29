@@ -295,6 +295,13 @@ a:hover {
   text-decoration: none;
 }
 
+.btn-disabled {
+  opacity: 0.75;
+  cursor: not-allowed;
+  pointer-events: none;
+  user-select: none;
+}
+
 .btn-primary {
   background: var(--color-accent);
   color: white;
@@ -781,11 +788,22 @@ a:focus-visible {
 }
 
 .app-badge {
+  display: inline-block;
   height: 48px;
   transition: var(--transition-smooth);
 }
 
 .app-badge:hover {
   transform: scale(1.05);
+}
+
+.app-badge--disabled {
+  opacity: 0.75;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.app-badge--disabled:hover {
+  transform: none;
 }
 

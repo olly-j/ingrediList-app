@@ -56,7 +56,7 @@ Before going live, ensure:
 - [ ] Navigation links work
 - [ ] Footer displays on all pages
 - [ ] Mobile responsive (test on iPhone)
-- [ ] Email link works: `help@ingrediList.app`
+- [ ] Email link works: `help@ingredilist.app`
 - [ ] Test dark mode (if supported by browser)
 - [ ] Favicon displays in browser tab
 
@@ -65,7 +65,7 @@ Before going live, ensure:
 ## 🎨 Customize Before Launch
 
 ### 1. Update Contact Email
-Replace `help@ingrediList.app` in:
+Replace `help@ingredilist.app` in:
 - `index.html`
 - `how-it-works.html`
 - `privacy.html`
@@ -138,8 +138,8 @@ After deploying:
 ## 🎯 Next Steps After Launch
 
 1. **App Store Connect:**
-   - Add Support URL: `https://ingredilist.app/support.html`
-   - Add Privacy URL: `https://ingredilist.app/privacy.html`
+   - Add Support URL: `https://ingredilist.app/support`
+   - Add Privacy URL: `https://ingredilist.app/privacy`
    - Add Marketing URL: `https://ingredilist.app`
 
 2. **Social Media:**

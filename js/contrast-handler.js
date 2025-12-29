@@ -27,7 +27,6 @@
       this.checkAllElements();
       this.setupMutationObserver();
       this.setupIntersectionObserver();
-      this.setupThemeToggle();
     }
 
     /**
@@ -219,31 +218,6 @@
       document.querySelectorAll('.glass-card, .hero, .feature-card').forEach(el => {
         observer.observe(el);
       });
-    }
-
-    /**
-     * Setup theme toggle functionality
-     */
-    setupThemeToggle() {
-      const toggle = document.getElementById('theme-toggle');
-      if (!toggle) return;
-
-      toggle.addEventListener('click', () => {
-        const currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
-        const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-        
-        document.documentElement.setAttribute('data-theme', newTheme);
-        localStorage.setItem('theme', newTheme);
-        
-        // Re-check contrast after theme change
-        setTimeout(() => this.checkAllElements(), 100);
-      });
-
-      // Load saved theme
-      const savedTheme = localStorage.getItem('theme');
-      if (savedTheme) {
-        document.documentElement.setAttribute('data-theme', savedTheme);
-      }
     }
 
     /**
